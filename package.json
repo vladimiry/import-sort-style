@@ -1,0 +1,63 @@
+{
+  "name": "@vladimiry/import-sort-style",
+  "version": "0.1.1",
+  "description": "Custom \"import-sort\" style rule initially built for use by \"ElectronMail\"",
+  "author": "Vladimir Yakovlev <dev.vladimir.y@gmail.com> (https://github.com/vladimiry)",
+  "license": "MIT",
+  "homepage": "https://github.com/vladimiry/import-sort-style",
+  "repository": "git@github.com:vladimiry/import-sort-style.git",
+  "keywords": [
+    "import-sort",
+    "typescript",
+    "import-formatter",
+    "formatter",
+    "formatting"
+  ],
+  "main": "./dist/index.js",
+  "scripts": {
+    "src:compile": "tsc --listEmittedFiles -p ./src/tsconfig.json",
+    "src:compile:watch": "tsc -w -p ./src/tsconfig.json",
+    "dist:clean": "rimraf ./dist",
+    "dist": "npm-run-all dist:clean lint src:compile test",
+    "lint:src:base": "tslint -p ./src/tsconfig.json -c ./tslint.json",
+    "lint:src": "yarn run lint:src:base \"./src/lib/**/*.ts\"",
+    "lint:test:base": "tslint -p ./test/tsconfig.json -c ./test/tslint.json",
+    "lint:test": "yarn run lint:test:base \"./test/**/*.ts\"",
+    "lint": "npm-run-all lint:src lint:test",
+    "test": "cross-env TS_NODE_PROJECT=./test/tsconfig.json ava"
+  },
+  "ava": {
+    "extensions": [
+      "ts",
+      "js"
+    ],
+    "files": [
+      "./test/**/*.{spec,test}.{ts,js}"
+    ],
+    "require": [
+      "ts-node/register",
+      "tsconfig-paths/register"
+    ],
+    "verbose": true
+  },
+  "peerDependencies": {
+    "import-sort-style": "^6.0.0"
+  },
+  "devDependencies": {
+    "@email-securely-app/import-sort-style": "^0.1.0",
+    "@types/node": "^12.12.30",
+    "ava": "^3.5.0",
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.3",
+    "import-sort-parser": "^6.0.0",
+    "import-sort-style": "^6.0.0",
+    "lint-staged": "^10.0.8",
+    "npm-run-all": "^4.1.3",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.6.2",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^6.1.0",
+    "tslint-rules-bunch": "^0.0.8",
+    "typescript": "^3.0.1"
+  }
+}

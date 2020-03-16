@@ -1,0 +1,14 @@
+environment:
+  matrix:
+    - nodejs_version: "8"
+    - nodejs_version: "10"
+    - nodejs_version: "12"
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - yarn install
+build: off
+test_script:
+  - node --version
+  - npm --version
+  - yarn --version
+  - yarn run dist

@@ -1,0 +1,34 @@
+{
+  // https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+  // https://www.typescriptlang.org/docs/handbook/compiler-options.html
+  "extends": "./tsconfig.checks.json",
+  "compilerOptions": {
+    /*
+    resolving & capabilities
+    */
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    /*
+    emitting
+    */
+    "target": "es2015",
+    "module": "commonjs",
+    "declaration": true,
+    "noEmitOnError": true,
+    "sourceMap": true,
+    /*
+    paths
+    */
+    "lib": [
+      "es5",
+      "es2015"
+    ],
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./@types"
+    ]
+  }
+}
