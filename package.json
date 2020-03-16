@@ -1,6 +1,6 @@
 {
   "name": "@vladimiry/import-sort-style",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Custom \"import-sort\" style rule initially built for use by \"ElectronMail\"",
   "author": "Vladimir Yakovlev <dev.vladimir.y@gmail.com> (https://github.com/vladimiry)",
   "license": "MIT",
@@ -44,12 +44,14 @@
     "import-sort-style": "^6.0.0"
   },
   "devDependencies": {
-    "@email-securely-app/import-sort-style": "^0.1.0",
     "@types/node": "^12.12.30",
+    "@vladimiry/import-sort-style": "^0.1.1",
     "ava": "^3.5.0",
     "cross-env": "^7.0.2",
     "husky": "^4.2.3",
+    "import-sort-cli": "^6.0.0",
     "import-sort-parser": "^6.0.0",
+    "import-sort-parser-typescript": "^6.0.0",
     "import-sort-style": "^6.0.0",
     "lint-staged": "^10.0.8",
     "npm-run-all": "^4.1.3",

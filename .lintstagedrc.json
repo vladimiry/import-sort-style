@@ -1,13 +1,11 @@
 {
-  "linters": {
-    "./*.ts": [
-      "import-sort --write"
-    ],
-    "./src/**/*.ts": [
-      "yarn run lint:src:base --fix"
-    ],
-    "./test/**/*.ts": [
-      "yarn run lint:test:base --fix"
-    ]
-  }
+  "*.ts": [
+    "import-sort --write"
+  ],
+  "./src/**/*.ts": [
+    "yarn run lint:src:base --fix"
+  ],
+  "./test/**/*.ts": [
+    "yarn run lint:test:base --fix"
+  ]
 }
