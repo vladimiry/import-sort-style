@@ -1,6 +1,6 @@
 import test from "ava";
 
-import _ from "./../dist";
+import _ from "./../lib";
 
 // TODO implement proper tests
 
