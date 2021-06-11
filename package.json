@@ -1,6 +1,6 @@
 {
   "name": "@vladimiry/import-sort-style",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Custom \"import-sort\" style rule initially built for use by \"ElectronMail\"",
   "author": "Vladimir Yakovlev <dev.vladimir.y@gmail.com> (https://github.com/vladimiry)",
   "license": "MIT",
@@ -57,17 +57,18 @@
     "import-sort-parser": "^6.0.0",
     "import-sort-parser-typescript": "^6.0.0",
     "import-sort-style": "^6.0.0",
-    "lint-staged": "^10.5.4",
+    "lint-staged": "^11.0.0",
     "npm-run-all2": "^5.0.2",
     "rimraf": "^3.0.2",
-    "ts-node": "^9.1.1",
+    "ts-node": "^10.0.0",
     "tsconfig-paths": "^3.9.0",
     "tslint": "^6.1.3",
     "tslint-rules-bunch": "^1.0.0",
-    "typescript": "^4.2.3"
+    "typescript": "^4.3.2"
   },
   "resolutions": {
-    "import-sort-cli/yargs": "^17.x",
-    "import-sort-parser-typescript/typescript": "^4.x"
+    "*/**/typescript": "^4.x",
+    "import-sort-cli/globby": "^11.x",
+    "import-sort-cli/yargs": "^17.x"
   }
 }
